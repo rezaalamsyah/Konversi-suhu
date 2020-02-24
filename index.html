@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>l</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script type="text/javascript">
+      fahrenheit = () =>{
+        let fahrenheitp = document.getElementById('fahrenheitp').value;
+        let hasil = fahrenheitp * 9 / 5 + 32 ;
+        document.getElementById('hasil').value = hasil;
+      }
+      reamur = () =>{
+        let reamurp = document.getElementById('reamurp').value;
+        let hasil1 = reamurp * 0.8 ;
+        document.getElementById('hasil1').value = hasil1;
+      }
+      kelvin = () =>{
+        let kelvinp = document.getElementById('kelvinp').value;
+        let hasil2 =5/4 * kelvinp + 273 ;
+        document.getElementById('hasil2').value = hasil2;
+      }
+      rankine = () =>{
+        let rankinep = document.getElementById('rankinep').value;
+        let hasil2 =rankinep * 1.8 ;
+        document.getElementById('hasil2').value = hasil2;
+      }
+
+      </script>
+      <style media="screen">
+        @media only screen and (min-width:600px){
+          .col-s-1 {width: 8.33%;}
+          .col-s-2 {width: 16.66%;}
+          .col-s-3 {width: 25%;}
+          .col-s-4 {width: 33.33%;}
+          .col-s-5 {width: 41.66%;}
+          .col-s-6 {width: 50%;}
+          .col-s-7 {width: 58.33%;}
+          .col-s-8 {width: 66.66%;}
+          .col-s-9 {width: 75%;}
+          .col-s-10 {width: 83.33%;}
+          .col-s-11 {width: 91.66%;}
+          .col-s-12 {width: 100%;}
+          .header{
+            background:#5e0001 ;
+            height: 50px;
+          }
+        }
+        @media only screen and (min-width:768px){
+          .col-1 {width: 8.33%;}
+          .col-2 {width: 16.66%;}
+          .col-3 {width: 25%;}
+          .col-4 {width: 33.33%;}
+          .col-5 {width: 41.66%;}
+          .col-6 {width: 50%;}
+          .col-7 {width: 58.33%;}
+          .col-8 {width: 66.66%;}
+          .col-9 {width: 75%;}
+          .col-10 {width: 83.33%;}
+          .col-11 {width: 91.66%;}
+          .col-12 {width: 100%;}
+          .header{
+            background:#5e0001 ;
+            height: 50px;
+          }
+        }
+      </style>
+  </head>
+  <body>
+    <div class="container">
+        <h5 align = "center" class ="col-12 bg-primary header">Perubahan suhu</h5>
+        <button type="button" class=" col-s-7 btn btn-success" data-toggle="modal" data-target="#largeModal">
+            celcius >> fahrenheit
+        </button>
+        <button type="button" class="col-s-7 btn btn-info" data-toggle="modal" data-target="#largeModal2">
+            celcius >> reamur
+        </button>
+        <button type="button" class="col-s-7 btn btn-danger" data-toggle="modal" data-target="#largeModal3">
+            reamur >> kelvin
+        </button>
+        <button type="button" class="col-s-7 btn btn-light" data-toggle="modal" data-target="#largeModal4">
+            kelvin >> rankine
+        </button>
+        <br>
+        <br>
+        <br>
+        <div class="col-12 bg-primary footer">
+          &copy; Copyright by me dude
+        </div>
+    </div>
+
+    <div class="modal fade" id="largeModal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-hearder bg-success text-white">
+                    <h4>celcius >> fahrenheit</h4>
+                    <span class="close" data-dismiss="modal">&times;</span>
+                </div>
+                <div class="modal-body">
+                  Celcius
+                  <input type="number" id="fahrenheitp" class="form-control">
+                   <button type="button" class="btn btn-info btn-block"  onclick="fahrenheit()">
+                      Hitung
+                    </button>
+                    Hasil
+                    <input type="text" id="hasil" class="form-control" readonly>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="close btn btn-sm btn-success" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="largeModal2">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-hearder bg-success text-white">
+                    <h4>celcius >> reamur</h4>
+                    <span class="close" data-dismiss="modal">&times;</span>
+                </div>
+                <div class="modal-body">
+                  Celcius
+                  <input type="number" id="reamurp" class="form-control">
+                   <button type="button" class="btn btn-info btn-block"  onclick="reamur()">
+                      Hitung
+                    </button>
+                    Hasil
+                    <input type="text" id="hasil1" class="form-control" readonly>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="close btn btn-sm btn-success" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="largeModal3">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-hearder bg-success text-white">
+                    <h4>reamur >> kelvin</h4>
+                    <span class="close" data-dismiss="modal">&times;</span>
+                </div>
+                <div class="modal-body">
+                  reamur
+                  <input type="number" id="kelvinp" class="form-control">
+                   <button type="button" class="btn btn-info btn-block"  onclick="kelvin()">
+                      Hitung
+                    </button>
+                    Hasil
+                    <input type="text" id="hasil2" class="form-control" readonly>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="close btn btn-sm btn-success" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="largeModal4">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-hearder bg-success text-white">
+                    <h4>kelvin >> rankine</h4>
+                    <span class="close" data-dismiss="modal">&times;</span>
+                </div>
+                <div class="modal-body">
+                  Kelvin
+                  <input type="number" id="rankinep" class="form-control">
+                   <button type="button" class="btn btn-info btn-block"  onclick="rankine()">
+                      Hitung
+                    </button>
+                    Hasil
+                    <input type="text" id="hasil3" class="form-control" readonly>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close btn btn-sm btn-success" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+  </body>
+</html>
